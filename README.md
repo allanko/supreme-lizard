@@ -4,4 +4,4 @@ This Twitter bot scrapes headlines about Donald Trump from the last seven days a
 See the bot in action [here](https://twitter.com/lizardheadlines).
 
 # Try it yourself
-Fill in your Mediacloud and Twitter API tokens in `config.txt.template` and rename it `config.txt`. Run `pip install -r requirements.txt` and then 
+Fill in your Mediacloud and Twitter API tokens in `config.txt.template` and rename it `config.txt`. Run `pip install -r requirements.txt` to install dependencies. Then run `python supremelizard.py` to post your own Tweet about the Supreme Lizard. 
