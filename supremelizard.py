@@ -13,18 +13,18 @@ mc = mediacloud.api.MediaCloud(MY_API_KEY)
 sources = 'media_sets_id:1' # us mainstream media
 query = '*'
 
-step = datetime.timedelta(2)
+step = datetime.timedelta(7)
 today = datetime.date.today() 
 
-stories = mc.storyList(query, solr_filter = [mc.publish_date_query(today - step, today), sources], rows = 50)
+stories = mc.storyList(query, solr_filter = [mc.publish_date_query(today - step, today), sources], rows = 5000)
 headlines = [s['title'] for s in stories if 'Trump' in s['title']]
 pick = random.choice(headlines)
 if 'Donald Trump' in pick:
-    print pick.replace('Donald Trump', 'Supreme Lizard')
+    tweet = pick.replace('Donald Trump', 'Supreme Lizard')
 elif 'the Trump' in pick:
-    print pick.replace('the Trump', 'Supreme Lizard')
+    tweet = pick.replace('the Trump', 'the Lizard')
 else:
-    print pick.replace('Trump', 'Supreme Lizard')
+    tweet = pick.replace('Trump', 'Supreme Lizard')
 
 # tweeting
 CONSUMER_KEY = parser.get('TWITTER', 'CONSUMER_KEY')
