@@ -1,1 +1,1 @@
-worker: python dashboardbot.py
+worker: python supremelizard.py
