@@ -1,4 +1,7 @@
 ## Supreme Lizard 
-This Twitter bot scrapes headlines about Donald Trump from the last seven days and tweets a random headline, replacing "Trump" with "Supreme Lizard." It is gratefully powered by [Mediacloud](http://mediacloud.org/) and [Tweepy](http://www.tweepy.org/).
+This Twitter bot scrapes headlines about Donald Trump from the last seven days and tweets a random headline, replacing "Trump" with "Supreme Lizard." Headlines are retrieved with the [Mediacloud](http://mediacloud.org/) Python API, found [here](https://pypi.python.org/pypi/mediacloud).
 
-See it in action [here](https://twitter.com/lizardheadlines).
+See the bot in action [here](https://twitter.com/lizardheadlines).
+
+# Try it yourself
+Fill in your Mediacloud and Twitter API tokens in `config.txt.template` and rename it `config.txt`. Run `pip install -r requirements.txt` and then 
