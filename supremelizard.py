@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# -*- coding: utf-8 -*-
 from ConfigParser import SafeConfigParser
 import mediacloud, datetime, tweepy, random
 
@@ -9,14 +8,14 @@ parser.read('config.txt')
 MY_API_KEY = parser.get('MEDIACLOUD', 'MY_API_KEY')
 mc = mediacloud.api.MediaCloud(MY_API_KEY)
 
-# top ten words of the last 7 days from mediacloud
-sources = 'media_sets_id:1' # us mainstream media
-query = '*'
+# stories with trump
+sources = 'tags_id_media:(8875027 9139487)' # us mainstream media and us top online news
+query = 'trump'
 
 step = datetime.timedelta(7)
 today = datetime.date.today() 
 
-stories = mc.storyList(query, solr_filter = [mc.publish_date_query(today - step, today), sources], rows = 5000)
+stories = mc.storyList(query, solr_filter = [mc.publish_date_query(today - step, today), sources], rows = 1000)
 headlines = [s['title'] for s in stories if 'Trump' in s['title']]
 pick = random.choice(headlines)
 if 'Donald Trump' in pick:
