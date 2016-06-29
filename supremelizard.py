@@ -25,6 +25,8 @@ pick = pick.replace('&#8217;', "'")
 pick = pick.replace('&#038;', "&")
 pick = pick.replace('&#x2018;', "'")
 pick = pick.replace('&#x2019;', "'")
+pick = pick.replace('&#8220;', '"')
+pick = pick.replace('&#8221;', '"')
 
 while 'Trump' in pick:
     if 'Donald Trump' in pick:
